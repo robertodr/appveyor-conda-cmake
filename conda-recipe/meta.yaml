@@ -1,0 +1,25 @@
+package:
+  name: conda-example-dgemm
+  version: "0.0.0"
+
+source:
+  path: ../  # this can be changed to git-url
+
+build:
+  number: 0
+  script:
+    - cmake -H. -Bbuild_conda -G "${CMAKE_GENERATOR}" -DCMAKE_INSTALL_PREFIX=${PREFIX}         # [not win]
+    - cmake -H. -Bbuild_conda -G "%CMAKE_GENERATOR%" -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" # [win]
+    - cmake --build build_conda --target install
+
+requirements:
+  host:
+    - mkl-devel 2018
+  build:
+    - cmake >=3.5
+    - {{ compiler('cxx') }}
+
+about:
+  home: http://www.example.com
+  license: MIT
+  summary: "Summary in here ..."
