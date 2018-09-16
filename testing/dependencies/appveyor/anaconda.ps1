@@ -99,13 +99,9 @@ function SetUpConda ($Anaconda_cache) {
 
 function main () {
     $Anaconda_cache = "C:\Deps\conda"
-    If ($env:ANACONDA_TESTS_ONLY -eq 1) {
-        Write-Host "-- ANACONDA_TESTS_ONLY is set, hence installing latest Miniconda"
-        InstallAnaconda $Anaconda_cache
-        SetUpConda $Anaconda_cache
-    } Else {
-        Write-Host "-- ANACONDA_TESTS_ONLY is not set, hence not installing it!"
-    }
+    Write-Host "-- ANACONDA_TESTS_ONLY is set, hence installing latest Miniconda"
+    InstallAnaconda $Anaconda_cache
+    SetUpConda $Anaconda_cache
 }
 
 main
