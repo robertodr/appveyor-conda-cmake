@@ -18,7 +18,7 @@ if "%nonVSGenerator%"=="true" (
   rem bash "pacman -Ss boost"
 
   rem more packages
-  bash -c "pacman -S --noconfirm mingw64/mingw-w64-x86_64-boost"
+  bash -c "pacman -S --noconfirm mingw64/mingw-w64-x86_64-ninja"
 ) else (
   echo "Using VS generator %CMAKE_GENERATOR%"
   echo "Let's get VcPkg working"
