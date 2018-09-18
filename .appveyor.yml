@@ -49,6 +49,7 @@ before_build:
   - cmake --version
 
 build_script:
+  - bash -c "pipenv run python test.py"
   - bash -c "./custom.sh build_conda_mkl"
 
 deploy: off
