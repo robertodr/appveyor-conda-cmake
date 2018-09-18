@@ -2,7 +2,7 @@ import sys
 import subprocess
 import shlex
 
-command = 'blah'
+command = './custom.sh build_conda_mkl'
 
 cmd = shlex.split(command)
 
