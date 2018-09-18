@@ -2,7 +2,7 @@ import sys
 import subprocess
 import shlex
 
-command = 'ls -l'
+command = 'blah'
 
 cmd = shlex.split(command)
 
@@ -14,4 +14,4 @@ result = subprocess.run(cmd,
 print('stdout', result.stdout)
 print('stderr', result.stderr)
 
-sys.exit(0)
+sys.exit(result.returncode)
