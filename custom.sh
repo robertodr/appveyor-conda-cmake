@@ -35,7 +35,7 @@ else
 
     conda build --build-only conda-recipe
 
-    conda install --use-local --yes conda-example-dgemm
+    conda install --no-update-deps --use-local --yes conda-example-dgemm
 
     dgemm-example
 
